@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Professional portfolio of a Full-Stack Web Developer, UI/UX Designer and AI Expert. Building modern, responsive and intelligent digital experiences.">
+<title>Portfolio | Web Developer & AI Expert</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --black: #080808;
+    --white: #ffffff;
+    --grey: #777777;
+    --light: #f5f5f5;
+    --border: #e9e9e9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--black);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: auto;
+}
+
+/* NAVIGATION */
+
+header {
+    background: var(--black);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    height: 76px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Manrope', sans-serif;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #999;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 13px;
+    color: #cccccc;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.nav-button {
+    border: 1px solid #777;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: white !important;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    padding: 125px 0 110px;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    background: #111;
+    border-radius: 50%;
+}
+
+.hero h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(42px, 7vw, 76px);
+    line-height: 1.12;
+    letter-spacing: -4px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #888;
+}
+
+.hero-description {
+    color: var(--grey);
+    max-width: 650px;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 14px 25px;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .3s;
+    border: 1px solid var(--black);
+}
+
+.btn-dark {
+    background: var(--black);
+    color: white;
+}
+
+.btn-dark:hover {
+    background: #333;
+}
+
+.btn-light {
+    background: white;
+    color: black;
+}
+
+.btn-light:hover {
+    background: #f1f1f1;
+}
+
+.hero-bottom {
+    display: flex;
+    gap: 35px;
+    margin-top: 65px;
+    flex-wrap: wrap;
+}
+
+.hero-stat strong {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.hero-stat span {
+    color: #888;
+    font-size: 11px;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+    padding: 100px 0;
+}
+
+.section-label {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 11px;
+    color: #888;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.section-heading {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(30px, 4vw, 45px);
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    color: var(--grey);
+    max-width: 620px;
+    font-size: 14px;
+}
+
+/* ABOUT */
+
+.about {
+    background: var(--light);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.about-text p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 18px;
+}
+
+.about-card {
+    background: white;
+    padding: 38px;
+    border: 1px solid var(--border);
+}
+
+.about-card h3 {
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.about-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    padding: 13px 0;
+    font-size: 13px;
+}
+
+.about-item span:last-child {
+    color: #888;
+    text-align: right;
+}
+
+/* SERVICES */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 45px;
+}
+
+.service-card {
+    border: 1px solid var(--border);
+    padding: 30px 25px;
+    transition: .3s;
+}
+
+.service-card:hover {
+    border-color: #111;
+    transform: translateY(-5px);
+}
+
+.service-number {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 30px;
+}
+
+.service-card h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* SKILLS */
+
+.skills {
+    background: var(--light);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-top: 40px;
+}
+
+.skill-box {
+    background: white;
+    padding: 22px;
+    border: 1px solid var(--border);
+}
+
+.skill-box h3 {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.skill-box p {
+    font-size: 12px;
+    color: #777;
+    line-height: 2;
+}
+
+/* PROJECTS */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 45px;
+}
+
+.project-card {
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: .3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-preview {
+    height: 240px;
+    background: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.browser {
+    width: 100%;
+    max-width: 420px;
+    height: 185px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px #00000012;
+    overflow: hidden;
+}
+
+.browser-bar {
+    height: 22px;
+    background: #f2f2f2;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    gap: 4px;
+}
+
+.browser-bar i {
+    width: 5px;
+    height: 5px;
+    background: #aaa;
+    border-radius: 50%;
+}
+
+.browser-content {
+    padding: 20px;
+}
+
+.browser-title {
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+.browser-small {
+    font-size: 8px;
+    color: #888;
+}
+
+.browser-line {
+    height: 5px;
+    width: 65%;
+    background: #e5e5e5;
+    margin-top: 8px;
+}
+
+.browser-line.short {
+    width: 40%;
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.project-info h3 {
+    font-size: 19px;
+    margin-bottom: 7px;
+}
+
+.project-info p {
+    font-size: 13px;
+    color: #777;
+}
+
+.project-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 17px;
+}
+
+.project-tags span {
+    font-size: 10px;
+    padding: 5px 10px;
+    background: #f1f1f1;
+    color: #555;
+}
+
+/* PROCESS */
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.process-item {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.process-item span {
+    color: #999;
+    font-size: 12px;
+}
+
+.process-item h3 {
+    font-size: 17px;
+    margin: 15px 0 10px;
+}
+
+.process-item p {
+    font-size: 12px;
+    color: #777;
+}
+
+/* WHY ME */
+
+.why {
+    background: var(--light);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.why-item {
+    background: white;
+    padding: 25px;
+    border: 1px solid var(--border);
+}
+
+.why-item h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.why-item p {
+    color: #777;
+    font-size: 13px;
+}
+
+/* CTA */
+
+.cta {
+    text-align: center;
+    padding: 110px 0;
+}
+
+.cta h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(34px, 5vw, 54px);
+    line-height: 1.2;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    color: #777;
+    font-size: 14px;
+    max-width: 520px;
+    margin: 0 auto 30px;
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--black);
+    color: white;
+    padding: 65px 0 25px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding-bottom: 45px;
+}
+
+.footer-top h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 30px;
+    letter-spacing: -1px;
+}
+
+.footer-top p {
+    color: #999;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.footer-email {
+    color: white;
+    font-size: 14px;
+    border-bottom: 1px solid #777;
+    padding-bottom: 5px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #292929;
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-bottom p {
+    color: #888;
+    font-size: 11px;
+}
+
+/* ANIMATIONS */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 850px) {
+    .nav-links {
+        gap: 17px;
+    }
+
+    .about-grid {
+        gap: 35px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 650px) {
+    .navbar {
+        height: 68px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        background: #080808;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px 5%;
+        gap: 22px;
+        display: none;
+        border-top: 1px solid #222;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hero {
+        padding: 95px 0 75px;
+        min-height: auto;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 75px 0;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid,
+    .projects-grid,
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .project-preview {
+        height: 210px;
+    }
+
+    .footer-top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 380px) {
+    .skills-grid,
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+    <div class="container navbar">
+
+        <a href="#" class="logo">PORTFOLIO<span>.</span></a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#footer" class="nav-button">Let's Talk</a></li>
+        </ul>
+
+    </div>
+</header>
+
+
+<!-- HERO SECTION -->
+
+<section class="hero" id="home">
+    <div class="container hero-content reveal">
+
+        <div class="eyebrow">
+            <span class="dot"></span>
+            WEB DEVELOPER · UI/UX · AI EXPERT
+        </div>
+
+        <h1>
+            Building Digital
+            Experiences With
+            <span>Code & AI.</span>
+        </h1>
+
+        <p class="hero-description">
+            I'm a Full-Stack Web Developer, UI/UX Designer and AI Expert
+            focused on building modern, responsive and powerful digital
+            experiences. I combine creative design, development and
+            artificial intelligence to turn ideas into functional websites
+            and digital solutions.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#projects" class="btn btn-dark">Explore My Work ↗</a>
+            <a href="#services" class="btn btn-light">What I Do</a>
+        </div>
+
+        <div class="hero-bottom">
+            <div class="hero-stat">
+                <strong>Web Development</strong>
+                <span>Frontend & Backend</span>
+            </div>
+
+            <div class="hero-stat">
+                <strong>UI/UX Design</strong>
+                <span>Modern User Experiences</span>
+            </div>
+
+            <div class="hero-stat">
+                <strong>Artificial Intelligence</strong>
+                <span>AI-Powered Development</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+    <div class="container about-grid">
+
+        <div class="about-text reveal">
+            <div class="section-label">01 / About Me</div>
+
+            <h2 class="section-heading">
+                More Than Just
+                Writing Code.
+            </h2>
+
+            <p>
+                I am a web developer passionate about creating digital
+                products that combine functionality, performance and
+                beautiful design.
+            </p>
+
+            <p>
+                My work covers frontend development, backend systems,
+                database integration, UI/UX design and AI-powered
+                development workflows.
+            </p>
+
+            <p>
+                I also work with modern AI tools to accelerate development,
+                explore creative possibilities and build smarter digital
+                solutions without compromising the user experience.
+            </p>
+
+            <p>
+                My goal is simple: transform ideas into professional,
+                practical and user-friendly digital experiences.
+            </p>
+        </div>
+
+        <div class="about-card reveal">
+            <h3>Professional Overview</h3>
+
+            <div class="about-item">
+                <span>Primary Role</span>
+                <span>Full-Stack Developer</span>
+            </div>
+
+            <div class="about-item">
+                <span>Specialization</span>
+                <span>UI/UX & AI</span>
+            </div>
+
+            <div class="about-item">
+                <span>Frontend</span>
+                <span>React & Next.js</span>
+            </div>
+
+            <div class="about-item">
+                <span>Backend</span>
+                <span>APIs & Databases</span>
+            </div>
+
+            <div class="about-item">
+                <span>Development</span>
+                <span>AI-Assisted Workflow</span>
+            </div>
+
+            <div class="about-item">
+                <span>Focus</span>
+                <span>Modern Web Solutions</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+    <div class="container">
+
+        <div class="reveal">
+            <div class="section-label">02 / Services</div>
+
+            <h2 class="section-heading">
+                What I Can Build For You.
+            </h2>
+
+            <p class="section-description">
+                From a simple professional website to a complete
+                full-stack digital platform, I deliver solutions
+                designed around your goals.
+            </p>
+        </div>
+
+        <div class="services-grid">
+
+            <div class="service-card reveal">
+                <div class="service-number">01 / DEVELOPMENT</div>
+                <h3>Website Development</h3>
+                <p>
+                    Modern, responsive and professional websites
+                    designed to represent your business and brand.
+                </p>
+            </div>
+
+            <div class="service-card reveal">
+                <div class="service-number">02 / FULL STACK</div>
+                <h3>Full-Stack Development</h3>
+                <p>
+                    Complete web applications with frontend,
+                    backend, database integration and authentication.
+                </p>
+            </div>
+
+            <div class="service-card reveal">
+                <div class="service-number">03 / DESIGN</div>
+                <h3>UI/UX Design</h3>
+                <p>
+                    Clean interfaces, thoughtful layouts and
+                    user-friendly experiences focused on usability.
+                </p>
+            </div>
+
+            <div class="service-card reveal">
+                <div class="service-number">04 / E-COMMERCE</div>
+                <h3>E-Commerce Websites</h3>
+                <p>
+                    Online stores with product management, shopping
+                    carts, customer accounts and order workflows.
+                </p>
+            </div>
+
+            <div class="service-card reveal">
+                <div class="service-number">05 / AI</div>
+                <h3>AI-Powered Solutions</h3>
+                <p>
+                    Using artificial intelligence and modern AI
+                    tools to build smarter and more efficient
+                    digital experiences.
+                </p>
+            </div>
+
+            <div class="service-card reveal">
+                <div class="service-number">06 / SYSTEMS</div>
+                <h3>Web Applications</h3>
+                <p>
+                    Business platforms, management systems,
+                    dashboards and custom web-based solutions.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- SKILLS -->
+
+<section class="skills" id="skills">
+    <div class="container">
+
+        <div class="reveal">
+            <div class="section-label">03 / Expertise</div>
+
+            <h2 class="section-heading">
+                Technologies & Skills.
+            </h2>
+
+            <p class="section-description">
+                A combination of modern development technologies,
+                creative design and artificial intelligence.
+            </p>
+        </div>
+
+        <div class="skills-grid">
+
+            <div class="skill-box reveal">
+                <h3>Frontend</h3>
+                <p>
+                    HTML5<br>
+                    CSS3<br>
+                    JavaScript<br>
+                    React.js<br>
+                    Next.js<br>
+                    Tailwind CSS
+                </p>
+            </div>
+
+            <div class="skill-box reveal">
+                <h3>Backend</h3>
+                <p>
+                    Node.js<br>
+                    API Integration<br>
+                    Authentication<br>
+                    Server-side Logic<br>
+                    Backend Architecture
+                </p>
+            </div>
+
+            <div class="skill-box reveal">
+                <h3>Database</h3>
+                <p>
+                    Supabase<br>
+                    PostgreSQL<br>
+                    SQLite<br>
+                    Database Design<br>
+                    Row Level Security
+                </p>
+            </div>
+
+            <div class="skill-box reveal">
+                <h3>AI & Design</h3>
+                <p>
+                    AI-Assisted Development<br>
+                    Prompt Engineering<br>
+                    AI Website Builders<br>
+                    UI/UX Design<br>
+                    Responsive Design
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+    <div class="container">
+
+        <div class="reveal">
+            <div class="section-label">04 / Selected Work</div>
+
+            <h2 class="section-heading">
+                Projects & Digital Experiences.
+            </h2>
+
+            <p class="section-description">
+                A selection of web development projects and concepts
+                covering e-commerce, business platforms and
+                full-stack applications.
+            </p>
+        </div>
+
+        <div class="projects-grid">
+
+            <!-- NOIRE -->
+
+            <div class="project-card reveal">
+                <div class="project-preview">
+                    <div class="browser">
+                        <div class="browser-bar">
+                            <i></i><i></i><i></i>
+                        </div>
+                        <div class="browser-content">
+                            <div class="browser-small">NOIRE / NEW COLLECTION</div>
+                            <div class="browser-title">DEFINE YOUR<br>OWN STANDARD.</div>
+                            <div class="browser-line"></div>
+                            <div class="browser-line short"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <h3>NOIRE — Fashion E-Commerce</h3>
+                    <p>
+                        A premium fashion shopping platform with
+                        product categories, customer accounts,
+                        wishlist, cart and order functionality.
+                    </p>
+                    <div class="project-tags">
+                        <span>Next.js</span>
+                        <span>Supabase</span>
+                        <span>E-Commerce</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- AZZARO -->
+
+            <div class="project-card reveal">
+                <div class="project-preview">
+                    <div class="browser">
+                        <div class="browser-bar">
+                            <i></i><i></i><i></i>
+                        </div>
+                        <div class="browser-content">
+                            <div class="browser-small">AZZARO / COLLECTION</div>
+                            <div class="browser-title">TIMELESS<br>STYLE.</div>
+                            <div class="browser-line"></div>
+                            <div class="browser-line short"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <h3>AZZARO — Clothing Store</h3>
+                    <p>
+                        A modern clothing e-commerce concept with
+                        product collections, authentication,
+                        shopping experience and WhatsApp ordering.
+                    </p>
+                    <div class="project-tags">
+                        <span>Web Development</span>
+                        <span>Authentication</span>
+                        <span>Shopping</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ANW -->
+
+            <div class="project-card reveal">
+                <div class="project-preview">
+                    <div class="browser">
+                        <div class="browser-bar">
+                            <i></i><i></i><i></i>
+                        </div>
+                        <div class="browser-content">
+                            <div class="browser-small">ANW / JEWELLERS</div>
+                            <div class="browser-title">ELEGANCE<br>IN EVERY DETAIL.</div>
+                            <div class="browser-line"></div>
+                            <div class="browser-line short"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <h3>ANW Jewellers — Business Website</h3>
+                    <p>
+                        A luxury jewellery brand showcase with
+                        premium styling, product presentation
+                        and business information.
+                    </p>
+                    <div class="project-tags">
+                        <span>UI/UX</span>
+                        <span>Brand Design</span>
+                        <span>Frontend</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- SCHOOL MANAGEMENT -->
+
+            <div class="project-card reveal">
+                <div class="project-preview">
+                    <div class="browser">
+                        <div class="browser-bar">
+                            <i></i><i></i><i></i>
+                        </div>
+                        <div class="browser-content">
+                            <div class="browser-small">SCHOOL MANAGEMENT SYSTEM</div>
+                            <div class="browser-title">SMARTER<br>SCHOOL MANAGEMENT.</div>
+                            <div class="browser-line"></div>
+                            <div class="browser-line short"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <h3>School Management System</h3>
+                    <p>
+                        A school management platform concept
+                        featuring administrator controls,
+                        student access and school registration.
+                    </p>
+                    <div class="project-tags">
+                        <span>Full Stack</span>
+                        <span>SQLite</span>
+                        <span>Authentication</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- BOOKLY -->
+
+            <div class="project-card reveal">
+                <div class="project-preview">
+                    <div class="browser">
+                        <div class="browser-bar">
+                            <i></i><i></i><i></i>
+                        </div>
+                        <div class="browser-content">
+                            <div class="browser-small">BOOKLY / PLATFORM</div>
+                            <div class="browser-title">A BETTER WAY<br>TO MANAGE.</div>
+                            <div class="browser-line"></div>
+                            <div class="browser-line short"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <h3>Bookly — Web Application</h3>
+                    <p>
+                        A database-driven application concept
+                        with separate customer and administrator
+                        roles and secure access management.
+                    </p>
+                    <div class="project-tags">
+                        <span>Supabase</span>
+                        <span>Database</span>
+                        <span>Role Management</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- PROJECT MANAGEMENT -->
+
+            <div class="project-card reveal">
+                <div class="project-preview">
+                    <div class="browser">
+                        <div class="browser-bar">
+                            <i></i><i></i><i></i>
+                        </div>
+                        <div class="browser-content">
+                            <div class="browser-small">PROJECT MANAGEMENT</div>
+                            <div class="browser-title">WORK SMARTER.<br>STAY ORGANIZED.</div>
+                            <div class="browser-line"></div>
+                            <div class="browser-line short"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <h3>Project Management System</h3>
+                    <p>
+                        A business-oriented platform concept
+                        with user dashboards, administrator
+                        management and structured workflows.
+                    </p>
+                    <div class="project-tags">
+                        <span>Full Stack</span>
+                        <span>Supabase</span>
+                        <span>Dashboards</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- PROCESS -->
+
+<section id="process">
+    <div class="container">
+
+        <div class="reveal">
+            <div class="section-label">05 / My Process</div>
+
+            <h2 class="section-heading">
+                From Idea To Reality.
+            </h2>
+
+            <p class="section-description">
+                A structured approach to creating websites
+                that match your requirements and business goals.
+            </p>
+        </div>
+
+        <div class="process-grid">
+
+            <div class="process-item reveal">
+                <span>STEP 01</span>
+                <h3>Understanding</h3>
+                <p>
+                    Understanding your business, goals,
+                    audience and project requirements.
+                </p>
+            </div>
+
+            <div class="process-item reveal">
+                <span>STEP 02</span>
+                <h3>Planning & Design</h3>
+                <p>
+                    Planning the structure, layout,
+                    user experience and visual direction.
+                </p>
+            </div>
+
+            <div class="process-item reveal">
+                <span>STEP 03</span>
+                <h3>Development</h3>
+                <p>
+                    Building the website using modern
+                    technologies and AI-assisted workflows.
+                </p>
+            </div>
+
+            <div class="process-item reveal">
+                <span>STEP 04</span>
+                <h3>Testing & Delivery</h3>
+                <p>
+                    Testing functionality, responsiveness
+                    and preparing the final project for delivery.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- WHY WORK WITH ME -->
+
+<section class="why">
+    <div class="container">
+
+        <div class="reveal">
+            <div class="section-label">06 / Why Work With Me</div>
+
+            <h2 class="section-heading">
+                Quality Beyond Expectations.
+            </h2>
+        </div>
+
+        <div class="why-grid">
+
+            <div class="why-item reveal">
+                <h3>Modern UI/UX</h3>
+                <p>
+                    Clean layouts and thoughtful interfaces
+                    designed around real user needs.
+                </p>
+            </div>
+
+            <div class="why-item reveal">
+                <h3>AI-Powered Workflow</h3>
+                <p>
+                    Using modern AI tools to improve
+                    development workflows and productivity.
+                </p>
+            </div>
+
+            <div class="why-item reveal">
+                <h3>Responsive Development</h3>
+                <p>
+                    Websites designed to work across
+                    desktop, tablet and mobile devices.
+                </p>
+            </div>
+
+            <div class="why-item reveal">
+                <h3>Functionality First</h3>
+                <p>
+                    Focusing on practical features,
+                    usability and reliable functionality.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+    <div class="container reveal">
+
+        <div class="section-label">07 / Let's Work Together</div>
+
+        <h2>
+            Have An Idea?<br>
+            Let's Build It.
+        </h2>
+
+        <p>
+            Whether you need a business website, an e-commerce
+            platform or a custom web application, let's turn
+            your vision into something meaningful.
+        </p>
+
+        <a href="#footer" class="btn btn-dark">
+            Start A Project ↗
+        </a>
+
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+
+<footer id="footer">
+    <div class="container">
+
+        <div class="footer-top">
+
+            <div>
+                <h2>Let's Create Something Great.</h2>
+                <p>
+                    Have a project in mind? I'd love to hear about it.
+                </p>
+            </div>
+
+            <a class="footer-email"
+               href="mailto:faizdrinksgothfluid@gmail.com">
+                faizdrinksgothfluid@gmail.com ↗
+            </a>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© <span id="year"></span> Portfolio. All rights reserved.</p>
+            <p>Web Development · UI/UX · Artificial Intelligence</p>
+        </div>
+
+    </div>
+</footer>
+
+
+<script>
+
+// MOBILE NAVIGATION
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("show");
+    menuToggle.setAttribute("aria-expanded", isOpen);
+    menuToggle.textContent = isOpen ? "✕" : "☰";
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("show");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+    });
+});
+
+// AUTOMATIC COPYRIGHT YEAR
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+// SCROLL REVEAL ANIMATION
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+            observer.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.12
+});
+
+document.querySelectorAll(".reveal").forEach(element => {
+    observer.observe(element);
+});
+
+</script>
+
+</body>
+</html>
